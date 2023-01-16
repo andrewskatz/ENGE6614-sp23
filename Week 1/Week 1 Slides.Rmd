@@ -1,0 +1,49 @@
+---
+title: "Week 1 Slides"
+subtitle: "ENGE 6614 Spring 2022"
+author: "Andrew Katz"
+institute: "Department of Engineering Education, VT"
+date: "2022/01/11 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+
+These slides are made using the xaringan package in RStudio
+???
+
+Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+
+---
+class: center, middle
+
+# Week 1 Materials
+
+---
+class: inverse, center, middle
+
+# Get Started with R and RStudio
+
+---
+
+# Welcome to class!
+
+We will use a Google Doc to structure much of today's class since there is not a huge need to use slides for what we will be doing.
+
+---
+
+In future weeks we will _probably_ be using slides, but this may change as we progress...
+
+(this will depend on how much we think we need to use slides in class to structure discussion)
+
