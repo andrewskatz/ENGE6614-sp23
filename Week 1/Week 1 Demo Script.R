@@ -1,12 +1,12 @@
 ## More demo code for week 1
 
 x <- 3
-y <- c(1, 2, 3)
+y <- c(1, 2, 5)
 z <- "this is a string"
 
 a <- x + y
 
-library(discovr)
+
 
 
 # installing packages
@@ -20,6 +20,8 @@ install.packages("tidyverse")
 library(tidyverse)
 
 
+
+library(discovr)
 
 # basic plotting
 x <- seq(1, 50) # create a sequence of numbers from 1 to 50

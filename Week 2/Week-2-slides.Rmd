@@ -3,7 +3,7 @@ title: "Week 2 Slides"
 subtitle: "Review, Intro Stats, and Intro to R"
 author: "Andrew Katz"
 institute: "Department of Engineering Education <br><br> Virginia Tech"
-date: "2022-01-25"
+date: "2023-01-24"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -24,7 +24,7 @@ output:
 
 --
 
-### The weekly writing assignments (i.e., reflections and class prep) do not need to follow the provided templates
+### The weekly writing assignments (i.e., reflections) do not need to follow the provided templates
 
 --
 ### General comments about grades
@@ -45,7 +45,7 @@ output:
 
 ### A note about course material organization
 * I do know that we could be using Canvas for organizing materials
-* Tools like Google Drive, Google Groups(?), Slack, and GitHub are common in practice
+* Tools like Google Drive, Google Spaces(?), Slack, and GitHub are common in practice
 * I want you all to be familiar and comfortable with these tools by the end of the semester 
 * Consider this a low-stakes opportunity to learn even more new tools (yay!)
 
@@ -689,7 +689,7 @@ $test = \frac{\text{variance explained by model}}{\text{variance not explained b
 * Type II error is also known as a false negative
 --
 
-* Type II error involves _not_ finding a significant result when there acutally _is_
+* Type II error involves _not_ finding a significant result when there actually _is_
 --
 
 * $\beta$-level refers to type II errors and is usually set at 0.8 (or 80%)

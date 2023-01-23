@@ -13,15 +13,21 @@ knitr::opts_chunk$set(echo = TRUE)
 This is an RMD file
 
 You can use # to mark a heading
+
 # Heading 1
+
 ## Heading 2
+
 ### Heading 3
+
 #### And so on
 
 You can also surround characters with * to make things *bold* and _ to make things _italics_
 
 Or use * or - to make bullet points
+
 * bullet one
+
 * bullet two
 
 - bullet three
@@ -34,3 +40,7 @@ y <- 2*x +4
 plot(x, y)
 
 ```
+
+
+
+
