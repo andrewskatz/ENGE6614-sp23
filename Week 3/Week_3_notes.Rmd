@@ -2,7 +2,9 @@
 title: "Week 3 Notes"
 author: "Katz"
 date: "1/31/2023"
-output: html_document
+output:
+  word_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -15,11 +17,12 @@ library(janitor)
 
 
 ## One continuous variable (either predictor or outcome variable)
+This is another comment
 
 ```{r example-hist, fig.show='hide', echo = TRUE}
 num <- 50
 mu <- 5
-stdev <- 2
+stdev <- 2 #
 
 x <- rnorm(n = num, mean = mu, sd = stdev)
 hist(x)
@@ -97,8 +100,18 @@ ggplot(data = x_df, mapping = aes(x = x_col)) +
 ```
 
 
+```{r}
 
-## One Discrete Variable (either predictor or outcome)
+setwd("G:\My Drive\\AK Faculty\\Teaching\\ENGE 6614 2023\\R files\\ENGE6614-sp23\\Week 2")
+list.files()
+
+
+
+```
+
+
+
+### One Discrete Variable (either predictor or outcome)
 
 
 ```{r pre-survey}
@@ -480,7 +493,28 @@ Practice reading in .dat file from the textbook dataset files for ch. 4
 
 ```{r}
 
+narcissism_df <- read.delim("./data/FacebookNarcissism.dat")
+```
+
+
+
+```{r}
+
 narcissism_df <- read_delim("./data/FacebookNarcissism.dat")
+
+```
+
+```{r}
+
+head(narcissism_df, 8)
+
+```
+
+
+
+```{r}
+narcissism_df %>% head(8)
+
 
 ```
 
@@ -503,5 +537,70 @@ narcissism_df %>%
        title = "Exploratory plot of Facebook Narcissism dataset")
 ```
 
+
+
+Hiccups example
+
+```{r}
+
+hiccups_df <- read_delim("./data/Hiccups.dat")
+
+```
+
+
+```{r}
+
+test_df <- hiccups_df %>%
+  pivot_longer(cols = c(Baseline, Tongue, Carotid, Rectum), values_to = "variable_value", names_to = "variable_name")
+
+```
+
+
+```{r}
+
+test_df %>%
+  ggplot(aes(x = variable_value)) +
+  geom_histogram() +
+  facet_wrap(.~ variable_name)
+
+```
+
+
+```{r}
+
+lecturer_df <- read_delim("./data/Lecturer Data.dat")
+
+```
+
+
+```{r}
+
+test_df <- lecturer_df %>%
+  separate(birth_date, 
+           into = c("month", "day", "year"),sep = "/")
+
+
+```
+
+
+```{r}
+test_df <- test_df %>%
+  mutate(year = as.numeric(year))
+```
+
+```{r}
+test_df
+
+```
+
+
+```{r}
+
+test_df %>%
+  ggplot(aes(x = year, y = friends)) +
+  geom_point()
+  
+
+```
 
 
