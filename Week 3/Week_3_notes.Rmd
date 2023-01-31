@@ -1,7 +1,7 @@
 ---
 title: "Week 3 Notes"
 author: "Katz"
-date: "2/2/2021"
+date: "1/31/2023"
 output: html_document
 ---
 
@@ -106,9 +106,6 @@ ggplot(data = x_df, mapping = aes(x = x_col)) +
 ```
 
 
-```{r}
-survey_df
-```
 
 
 ```{r pre-survey}
@@ -229,10 +226,16 @@ survey_df %>%
 A quick note on filters
 
 ```{r}
+# these two accomplish the same thing
+filtered_df <- filter(survey_df, required == "yes")
+filtered_df
 
-filter(survey_df, required == "yes")
+```
 
+
+```{r}
 filtered_df <- survey_df %>% filter(required == "yes")
+filtered_df
 
 ```
 
@@ -473,7 +476,32 @@ newdf %>%
 ```
 
 
+Practice reading in .dat file from the textbook dataset files for ch. 4
 
+```{r}
+
+narcissism_df <- read_delim("./data/FacebookNarcissism.dat")
+
+```
+
+
+Look at the dataframe
+
+```{r}
+narcissism_df
+```
+
+
+Let's try to plot the distribution for each rating type
+
+```{r}
+narcissism_df %>% 
+  ggplot(aes(x = Rating)) +
+  geom_histogram() +
+  facet_wrap(.~Rating_Type) +
+  labs(y = "Count",
+       title = "Exploratory plot of Facebook Narcissism dataset")
+```
 
 
 
