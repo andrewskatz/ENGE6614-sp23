@@ -78,20 +78,6 @@ This is a _bivariate_ correlation coefficient because it is looking at the corre
 We can calculate the correlatoin between two variables using the `cor()` or `cor.test()` functions, which are part of base R. 
 
 
-We will use the RExam.dat for several examples in this section of the notes.
-
-```{r}
-
-exam_df <- read.delim(file = "./data/RExam.dat", header = TRUE)
-
-```
-
-With the data loaded into your working environment, see if you can:
-
-* Plot the distribution of exam scores
-* Calculate the correlation between numeracy and exam score
-* Try to plot the exam score distributions for the two universities separately
-
 ## Another worked example for cleaning and prelim analysis
 
 
@@ -188,7 +174,7 @@ my_df$ParticipateStudyAbroadSemester[is.na(my_df$ParticipateStudyAbroadSemester)
 my_df$ParticipateInternCoop...[is.na(mydf$ParticipateInternCoop...)] <- 0 ------- this variable read in cumbersomely named and I don't care about it right now so I'll skip
 
 
-Here is An alternative method to replace NAs in specific columns:
+Here is an alternative method to replace NAs in specific columns:
 ```{r}
 my_df <- my_df %>% 
   replace_na(list(ParticipateCService = 0, ParticipateStudyAbroadSemester = 0, ParticipateServiceL = 0))
@@ -202,14 +188,20 @@ At this point, we are ready for some analysis
 Let's investigate correlations. What seems most obvious would just be to run cor() but, as we found out in class, this can cause us to run full speed ahead without considering assumptions
 
 ```{r}
-my_correlations <- my_df %>% select(SJCa,SJCh,DA) %>% cor()
+my_correlations <- my_df %>% 
+  select(SJCa,SJCh,DA) %>% 
+  cor()
+
 print(my_correlations)
 ```
 
-Ok, so, it is important that we note that this ran correlations but R doesn't know that this was sample data and therefore that we are interested instatistical significance (or not) of these results AND that our data may need another method (e.g., non-parametric).  cor() does have a way to run spearman instead.
+Ok, so, it is important that we note that this ran correlations but R doesn't know that this was sample data and therefore that we are interested in statistical significance (or not) of these results AND that our data may need another method (e.g., non-parametric).  cor() does have a way to run spearman instead.
 
 ```{r}
-my_spearman_correlations <- my_df %>% select(SJCa,SJCh,DA) %>% cor(method="spearman")
+my_spearman_correlations <- my_df %>% 
+  select(SJCa,SJCh,DA) %>% 
+  cor(method="spearman")
+
 print(my_spearman_correlations)
 
 ```
@@ -242,3 +234,30 @@ my_df %>% ggplot(aes(x = SJCa)) +
 ```
 
 Other functions we used today in class were describe() and also the q-q plot creation to investigate normality assumption copying syntax from the Field, Miles, & Field book
+
+
+
+
+
+We will use the RExam.dat for several examples in this section of the notes.
+
+```{r}
+
+exam_df <- read.delim(file = "./data/RExam.dat", header = TRUE)
+
+```
+
+With the data loaded into your working environment, see if you can:
+
+* Plot the distribution of exam scores
+* Calculate the correlation between numeracy and exam score
+* Try to plot the exam score distributions for the two universities separately
+
+```{r}
+
+exam_df %>%
+  head()
+
+```
+
+
