@@ -4,57 +4,36 @@
     <title>Week 4 Slides</title>
     <meta charset="utf-8" />
     <meta name="author" content="Andrew Katz" />
-    <meta name="date" content="2022-02-08" />
-    <script src="libs/header-attrs-2.11/header-attrs.js"></script>
+    <meta name="date" content="2023-02-07" />
+    <script src="libs/header-attrs-2.19/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <link href="libs/panelset-0.2.4/panelset.css" rel="stylesheet" />
-    <script src="libs/panelset-0.2.4/panelset.js"></script>
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Week 4 Slides
+]
+.subtitle[
 ## Assumptions and Correlations
+]
+.author[
 ### Andrew Katz
+]
+.institute[
 ### Department of Engineering Education <br><br> Virginia Tech
-### 2022-02-08
+]
+.date[
+### 2023-02-07
+]
 
 ---
 
 
-```
-## Warning: package 'tidyverse' was built under R version 4.0.5
-```
-
-```
-## Warning: package 'ggplot2' was built under R version 4.0.5
-```
-
-```
-## Warning: package 'tibble' was built under R version 4.0.5
-```
-
-```
-## Warning: package 'tidyr' was built under R version 4.0.5
-```
-
-```
-## Warning: package 'readr' was built under R version 4.0.5
-```
-
-```
-## Warning: package 'dplyr' was built under R version 4.0.5
-```
-
-```
-## Warning: package 'forcats' was built under R version 4.0.5
-```
-
-```
-## Warning: package 'car' was built under R version 4.0.5
-```
 
 
 ---
@@ -70,18 +49,13 @@ class: center, middle, inverse, title-slide
 
 * Let's take a minute to review it now...
 
---
-
-### I have started compiling course notes in a book available at this URL: https://andrewskatz.github.io/test_course_note/
+* Note that this has been pushed back a week
 
 --
 
 ### If you have suggestions about the class, the feedback surveys are a great option
 
---
 
-
-### I will update the key terms list this week
 
 
 
@@ -358,15 +332,15 @@ head(min_data)
 ```
 
 ```
-## # A tibble: 6 x 2
+## # A tibble: 6 × 2
 ##   discipline minutes
 ##   &lt;chr&gt;        &lt;dbl&gt;
-## 1 civ           58.5
-## 2 civ           72.3
+## 1 civ           81.5
+## 2 civ           71.9
 ## 3 civ          102. 
-## 4 civ          111. 
-## 5 civ           87.2
-## 6 civ           78.1
+## 4 civ           84.5
+## 5 civ           74.9
+## 6 civ           79.0
 ```
 
 ]
@@ -388,9 +362,9 @@ leveneTest(minutes ~ discipline, data = min_data)
 
 ```
 ## Levene's Test for Homogeneity of Variance (center = median)
-##       Df F value  Pr(&gt;F)  
-## group  1  5.0526 0.02683 *
-##       98                  
+##       Df F value    Pr(&gt;F)    
+## group  1  19.821 2.254e-05 ***
+##       98                      
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ```
@@ -720,6 +694,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

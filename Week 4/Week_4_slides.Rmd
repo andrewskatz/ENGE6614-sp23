@@ -3,7 +3,7 @@ title: "Week 4 Slides"
 subtitle: "Assumptions and Correlations"
 author: "Andrew Katz"
 institute: "Department of Engineering Education <br><br> Virginia Tech"
-date: "2022-02-08"
+date: "2023-02-07"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -36,18 +36,13 @@ xaringanExtra::use_panelset()
 
 * Let's take a minute to review it now...
 
---
-
-### I have started compiling course notes in a book available at this URL: https://andrewskatz.github.io/test_course_note/
+* Note that this has been pushed back a week
 
 --
 
 ### If you have suggestions about the class, the feedback surveys are a great option
 
---
 
-
-### I will update the key terms list this week
 
 
 
