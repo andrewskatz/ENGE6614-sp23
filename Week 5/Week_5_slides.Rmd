@@ -3,7 +3,7 @@ title: "Week 5 Slides"
 subtitle: "Simple Regression"
 author: "Andrew Katz"
 institute: "Department of Engineering Education <br><br> Virginia Tech"
-date: "2022-02-15"
+date: "2023-02-14"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -32,19 +32,18 @@ xaringanExtra::use_panelset()
 ]
 
 --
-### Problem Set 1 is due Wednesday :)
+### Problem Set 1 is due Thursday :)
 
 * Please let me know if you have questions!
 
 --
 
-### Course notes in a book available at this URL: https://andrewskatz.github.io/test_course_note/
-
---
 
 ### Don't forget about the feedback surveys
 
+--
 
+### Books are available for lending if you need
 
 
 

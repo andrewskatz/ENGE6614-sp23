@@ -261,3 +261,44 @@ exam_df %>%
 ```
 
 
+```{r}
+
+x_norm <- rnorm(n = 100, mean = 10, sd = 3)
+x_df <- tibble(x_norm_col = x_norm)
+
+```
+
+
+```{r}
+
+x_df %>% 
+  ggplot(aes(x = x_norm)) +
+  geom_histogram(color = "white", binwidth = 0.25)
+
+```
+
+
+```{r}
+
+
+x_non_norm <- rpois(n = 100, lambda = 8)
+x_df$x_non_norm_col <- x_non_norm
+
+
+```
+
+
+```{r}
+
+x_df %>% 
+  ggplot(aes(x = x_non_norm_col)) +
+  geom_histogram(color = "white", binwidth = 0.25) +
+  labs(x = "Distribution of non-normal random variable",
+       y = "Frequency",
+       title = "Example plot of non-normally distributed data") +
+  theme_light() +
+  theme(plot.title = element_text(hjust= 0.5))
+
+```
+
+
