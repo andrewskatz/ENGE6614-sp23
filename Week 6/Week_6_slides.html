@@ -4,57 +4,36 @@
     <title>Week 6 Slides</title>
     <meta charset="utf-8" />
     <meta name="author" content="Andrew Katz" />
-    <meta name="date" content="2022-02-22" />
-    <script src="libs/header-attrs-2.11/header-attrs.js"></script>
+    <meta name="date" content="2023-02-21" />
+    <script src="libs/header-attrs-2.19/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <link href="libs/panelset-0.2.4/panelset.css" rel="stylesheet" />
-    <script src="libs/panelset-0.2.4/panelset.js"></script>
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Week 6 Slides
+]
+.subtitle[
 ## Multiple Regression
+]
+.author[
 ### Andrew Katz
+]
+.institute[
 ### Department of Engineering Education <br><br> Virginia Tech
-### 2022-02-22
+]
+.date[
+### 2023-02-21
+]
 
 ---
 
 
-```
-## Warning: package 'tidyverse' was built under R version 4.0.5
-```
-
-```
-## Warning: package 'ggplot2' was built under R version 4.0.5
-```
-
-```
-## Warning: package 'tibble' was built under R version 4.0.5
-```
-
-```
-## Warning: package 'tidyr' was built under R version 4.0.5
-```
-
-```
-## Warning: package 'readr' was built under R version 4.0.5
-```
-
-```
-## Warning: package 'dplyr' was built under R version 4.0.5
-```
-
-```
-## Warning: package 'forcats' was built under R version 4.0.5
-```
-
-```
-## Warning: package 'car' was built under R version 4.0.5
-```
 
 
 ---
@@ -72,12 +51,7 @@ class: center, middle, inverse, title-slide
 
 --
 
-### Course notes in a book available at this URL: https://andrewskatz.github.io/test_course_note/
-
---
-
-### Don't forget about the feedback surveys
-
+Problem Set 2 is right around the corner
 
 
 
@@ -636,6 +610,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

@@ -3,7 +3,7 @@ title: "Week 6 Slides"
 subtitle: "Multiple Regression"
 author: "Andrew Katz"
 institute: "Department of Engineering Education <br><br> Virginia Tech"
-date: "2022-02-22"
+date: "2023-02-21"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -36,12 +36,7 @@ xaringanExtra::use_panelset()
 
 --
 
-### Course notes in a book available at this URL: https://andrewskatz.github.io/test_course_note/
-
---
-
-### Don't forget about the feedback surveys
-
+Problem Set 2 is right around the corner
 
 
 
