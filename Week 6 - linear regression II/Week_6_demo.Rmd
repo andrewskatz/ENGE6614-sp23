@@ -18,7 +18,7 @@ library(car)
 
 
 
-### Explore the child aggression data set #########
+### Explore the child aggression data set 
 
 ```{r}
 
@@ -72,14 +72,20 @@ ca_df_long <- ca_df %>%
 After making sure everything looks in order, run the same plot command with the addition of a facet.
 
 Note that the fill = variable_name tells R to color the plot with different colors by variable_name and the theme(...) tells R to get rid of the legend that automatically shows up
+```{r}
+
+```
+
+
 
 
 ```{r}
 
 ca_df_long %>% 
   ggplot(aes(x = variable_value, fill = variable_name)) +
-  geom_histogram() +
-  facet_wrap(variable_name ~.) +
+  geom_histogram(color = "white") +
+  facet_wrap(variable_name ~.,scales = "free_x") +
+  labs(x = "Principal salary")
   theme(legend.position = "none")
 ```
 
@@ -304,7 +310,8 @@ First, plot the distribution of the residuals by themselves
 ```{r}
 histogram <- ca_df %>% 
   ggplot(aes(x = studentized.residuals)) +
-  geom_histogram(aes(y = ..density..)) +
+  geom_histogram(aes(y = ..density..),
+                 color = "white") +
   labs(x = "Studentized Residuals",
        y = "Density")
 histogram

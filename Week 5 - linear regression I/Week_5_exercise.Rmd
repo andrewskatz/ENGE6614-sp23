@@ -2,7 +2,9 @@
 title: "Week 5 Exercises"
 author: "Katz"
 date: "2/13/2021"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -21,8 +23,8 @@ In the first exercise, there are instructions outlining each step to follow. The
 First, read in the data. In this case, the two CSV files are stored in a folder called "data". Be sure to adjust this path however you need.
 
 ```{r}
-file_path_prin <- "./Week 5/data/principalSalaries.csv"
-file_path_tea <- "./Week 5/data/teacherSalaries.csv"
+file_path_prin <- "./data/principalSalaries.csv"
+file_path_tea <- "./data/teacherSalaries.csv"
 
 principal_salaries <- read_csv(file_path_prin)
 teacher_salaries <- read_csv(file_path_tea)

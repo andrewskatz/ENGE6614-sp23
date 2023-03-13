@@ -2,7 +2,10 @@
 title: "Week_6_exercise"
 author: "Katz"
 date: "2/22/2021"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -12,6 +15,29 @@ library(broom)
 library(car)
 library(psych)
 ```
+
+##### Problem 1
+
+
+```{r}
+
+df %>%
+  filter(!is.na(div_num))
+```
+
+
+
+
+```{r}
+
+x <- 3
+
+```
+
+Interpretation of analysis for problem 1
+
+## Problem 2
+
 
 
 ## For this exercise, you will be working with the student_happiness.csv file.
