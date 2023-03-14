@@ -14,7 +14,7 @@ library(psych)
 set.seed(42)
 ```
 
-# Week 7 - logistic regression
+# Week 9 - logistic regression
 
 
 
@@ -58,7 +58,7 @@ samp_df <- tibble(discipline = disc_samp,
                   persist = pers_samp,
                   gpa = round(rnorm(n = samp_size, mean = 3, sd = 0.3), 2))
 
-summary()
+summary(samp_df)
 ```
 
 
